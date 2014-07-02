@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Example3</title>
+</head>
+<body>
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+	    <path d="M0 0 C0 100 100 100 100 0 q150 100 200 0" stroke='blue' stroke-width='1'/>
+	    <!-- <path d="M0 100 C0 50 100 150 100 100 S150 50 150 100" stroke='blue' stroke-width='1'/> -->
+	    <path stroke='pink' stroke-width='2' fill='none' id='pathtest'/>
+	</svg>
+</body>
+<script>
+	(function(){
+		var pos1 = [50,100];
+		var path = document.getElementById('pathtest');
+		var r = 40;
+		var pos2 = [150,100];
+		var t = 0;
+		var inter = setInterval(function(){
+			var points = [
+				pos1[0]+Math.cos(Math.PI*(t-90)/180)*r,
+				pos1[1]+Math.sin(Math.PI*(t-90)/180)*r,
+				pos2[0]+Math.cos(Math.PI*(t+90)/180)*r,
+				pos2[1]+Math.sin(Math.PI*(t+90)/180)*r
+			];
+			points = points.concat(pos2);
+			path.setAttribute('d','M'+pos1.join(' ')+' C'+points.join(' '));
+			t++;
+			//clearInterval(inter);
+		},0);
+	})();
+</script>
+</html>

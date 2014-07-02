@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Example3</title>
+</head>
+<body>
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<!--一个圆心为（100，50） 半径为40，描边颜色黑，线宽2，填充红色的圆-->
+		<circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red"/>
+		<!--一个中心为（300，50） X轴半径为100，y轴半径为40，填充粉红色的椭圆-->
+		<ellipse cx="300" cy="50" rx="100" ry="40" fill="pink"/>
+		<!--一条连接点（450，0）和点（550，100），黑色，线宽2的直线段-->
+		<line x1="450" y1="0" x2="550" y2="100" stroke="black" stroke-width="2"/>
+		<!--一个由经过点（0，120）（100 300）（210 170）的折线围成，填充靛蓝色的多边形-->
+		<polygon points="0 120,100 300,210 170" style="fill:cyan;"/>
+		<!--一条经过点（0，120）（100 300）（210 170）的折线-->
+		<polyline points="240 120,300 300,310 170" stroke="black" fill="none"/>
+		<!--一个左上角坐标为（450，150） 宽300，高80，填充灰色的矩形-->
+		<rect x="450" y="150" width="300" height="80" fill="gray"/>
+	</svg>
+</body>
+</html>
